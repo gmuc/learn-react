@@ -1,19 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-import Taschenrechner from './Taschenrechner';
+import Taschenrechner from "./components/Taschenrechner";
 
-const greeting = 'World';
-const wert1 = 'wert1???';
-const wert2 = 'wert2???';
-const ergebnis = 'ergebnis???';
-const mountNode = document.getElementById('mount');
+const greeting = "World";
+const wert1 = "wert1???";
+const wert2 = "wert2???";
+const ergebnis = "ergebnis???";
+const mountNode = document.getElementById("mount");
 ReactDOM.render(
-	<Taschenrechner
-		greeting={greeting}
-		wert1={wert1}
-		wert2={wert2}
-		ergebnis={ergebnis}
-	/>,
-	mountNode
+  <Taschenrechner
+    greeting={greeting}
+    wert1={wert1}
+    wert2={wert2}
+    ergebnis={ergebnis}
+  />,
+  mountNode
 );
