@@ -120,9 +120,23 @@ export default class Taschenrechner extends React.Component {
         {"  "}= {wert2}
         <br />
         <br />
-        <button onClick={() => this.plus()}>+</button>
+        <button
+          ref={node => {
+            this.button_plus = node;
+          }}
+          onClick={() => this.plus()}
+        >
+          +
+        </button>
         {"  "}
-        <button onClick={() => this.minus()}>-</button>
+        <button
+          ref={node => {
+            this.button_minus = node;
+          }}
+          onClick={() => this.minus()}
+        >
+          -
+        </button>
         <br />
         <p>Ergebnis: {"  " + ergebnis}</p>
       </div>
@@ -166,5 +180,7 @@ export default class Taschenrechner extends React.Component {
     console.log("start componentDidMount");
     this.field_wert1.style.backgroundColor = "lightblue";
     this.field_wert2.style.backgroundColor = "lightgray";
+    this.button_plus.style.backgroundColor = "yellow";
+    this.button_minus.style.backgroundColor = "yellow";
   }
 }
