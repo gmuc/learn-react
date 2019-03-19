@@ -92,6 +92,10 @@ export default class Taschenrechner extends React.Component {
         <br />
         Wert1:{"  "}
         <input
+          name="input_wert1"
+          ref={node => {
+            this.field_wert1 = node;
+          }}
           onChange={event => {
             this.updateWert1(event.target.value);
             this.resetErgebnis();
@@ -103,6 +107,10 @@ export default class Taschenrechner extends React.Component {
         <br />
         Wert2:{"  "}
         <input
+          name="input_wert2"
+          ref={node => {
+            this.field_wert2 = node;
+          }}
           onChange={event => {
             this.updateWert2(event.target.value);
             this.resetErgebnis();
@@ -128,7 +136,11 @@ export default class Taschenrechner extends React.Component {
 
     let sum = wert1 + wert2;
 
-    console.log("componentWillMount start => wait 10 sec sum:" + sum + ":");
+    console.log(
+      "componentWillMount check & change Object values before component mount\nstart sum:" +
+        sum +
+        ":"
+    );
 
     if (this.props.wert1 && this.props.wert2) {
       if (sum <= 10) {
@@ -152,5 +164,7 @@ export default class Taschenrechner extends React.Component {
 
   componentDidMount() {
     console.log("start componentDidMount");
+    this.field_wert1.style.backgroundColor = "lightblue";
+    this.field_wert2.style.backgroundColor = "lightgray";
   }
 }
