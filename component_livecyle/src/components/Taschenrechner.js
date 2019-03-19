@@ -92,7 +92,6 @@ export default class Taschenrechner extends React.Component {
         <br />
         Wert1:{"  "}
         <input
-          name="input_wert1"
           ref={node => {
             this.field_wert1 = node;
           }}
@@ -107,7 +106,6 @@ export default class Taschenrechner extends React.Component {
         <br />
         Wert2:{"  "}
         <input
-          name="input_wert2"
           ref={node => {
             this.field_wert2 = node;
           }}
