@@ -13,33 +13,18 @@ Themen:
 
 ### Installation
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+Folgende Schritte:
 
 ```
-Give the example
+git clone https://github.com/gmuc/learn-react.git
+cd learn-react/component_livecyle
+npm install
+npm run start
 ```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Built With
 
 * [react](https://reactjs.org/) - als WEB-Framework
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
