@@ -9,8 +9,6 @@ Themen:
 
 ## Getting Started
 
-* Installation & Start der Anwendung wie unten beschrieben
-
 ### Installation
 
 Folgende Schritte:
@@ -21,6 +19,23 @@ cd learn-react/component_livecyle
 npm install
 npm run start
 ```
+## Lessons
+
+### Grundlagen
+
+???
+
+### componentWillMount
+
+???
+
+### componentDidMount
+
+???
+
+### React refs
+
+???
 
 ## Built With
 
@@ -28,7 +43,7 @@ npm run start
 
 ## Authors
 
-* **Gerd Mucha 2019** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Gerd Mucha 2019** 
 
 ## License
 
