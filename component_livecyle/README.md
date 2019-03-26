@@ -25,7 +25,9 @@ npm run start
 
 ### Grundlagen
 
-Livecyclemethoden gibt es nur bei KLassen-Komponenten.
+Livecyclemethoden gibt es nur bei KLassen-Komponenten. Nachfolgend sind einige wichtige dieser Methoden beschrieben.
+
+Source: learn-react/component_livecyle/src/components/Taschenrechner.js
 
 ### componentWillMount
 
