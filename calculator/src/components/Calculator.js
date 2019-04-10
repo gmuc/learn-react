@@ -1,5 +1,7 @@
 import React from "react";
 
+import Result from "./Result.js";
+
 export default class Taschenrechner extends React.Component {
   constructor(props) {
     super(props);
@@ -9,9 +11,11 @@ export default class Taschenrechner extends React.Component {
 
     this.state = {
       level: "unknown",
+      operation: "unknown",
       greeting: this.props.greeting,
       wert1: 1,
       wert2: 2,
+      resultval: 0,
       ergebnis: this.props.ergebnis
     };
   }
@@ -64,7 +68,9 @@ export default class Taschenrechner extends React.Component {
     let gleichung = wert1 + " + " + wert2 + " = " + summe;
 
     this.setState({
-      ergebnis: gleichung
+      ergebnis: gleichung,
+      operation: "+",
+      resultval: summe
     });
   }
 
@@ -75,16 +81,35 @@ export default class Taschenrechner extends React.Component {
 
     let gleichung = wert1 + " - " + wert2 + " = " + differenz;
     this.setState({
-      ergebnis: gleichung
+      ergebnis: gleichung,
+      operation: "+",
+      resultval: differenz
     });
   }
 
   render() {
     console.log("start render");
 
-    const { level, wert1, wert2, ergebnis } = this.state;
+    const { level, wert1, wert2, ergebnis, operation, resultval } = this.state;
 
-    console.log("end render");
+    console.log(
+      "end render operation: " +
+        operation +
+        ", " +
+        level +
+        ", " +
+        wert1 +
+        ", " +
+        wert2 +
+        ", " +
+        ergebnis +
+        ", " +
+        operation +
+        ", " +
+        resultval +
+        " state:",
+      this.state
+    );
 
     return (
       <div>
@@ -136,11 +161,15 @@ export default class Taschenrechner extends React.Component {
           -
         </button>
         <br />
-        <p>Ergebnis: {"  " + ergebnis}</p>
+        <Result
+          number1={wert1}
+          number2={wert2}
+          result={resultval}
+          operator="+"
+        />
       </div>
     );
   }
-
   // Livecyclemethodes
 
   componentWillMount() {
@@ -167,7 +196,7 @@ export default class Taschenrechner extends React.Component {
     }
     //await sleep(10000);
 
-    console.log("componentWillMount ende");
+    console.log("componentWillMount end");
 
     /* setTimeout(function() {
       console.log("componentWillMount ende");

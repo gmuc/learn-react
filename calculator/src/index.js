@@ -1,7 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import style from "./assets/style/calculator.css";
 
-import Taschenrechner from "./components/Taschenrechner";
+import Calculator from "./components/Calculator";
+import Layout from "./components/Layout";
 
 const greeting = "World";
 const wert1 = "wert1???";
@@ -9,11 +11,14 @@ const wert2 = "wert2???";
 const ergebnis = "ergebnis???";
 const mountNode = document.getElementById("mount");
 ReactDOM.render(
-  <Taschenrechner
-    greeting={greeting}
-    wert1={wert1}
-    wert2={wert2}
-    ergebnis={ergebnis}
-  />,
+  <Layout>
+    <Calculator
+      greeting={greeting}
+      wert1={wert1}
+      wert2={wert2}
+      ergebnis={ergebnis}
+    />
+  </Layout>,
+
   mountNode
 );
